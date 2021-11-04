@@ -1,0 +1,57 @@
+ALGORITHM VECT
+VAR
+    i: INTEGER:=0;
+    j: INTEGER:=0;
+    tab: ARRAY_OF array ;
+    sum: INTEGER;
+
+BEGIN
+
+    FOR i FROM 0 TO tab.length-1 STEP step 1 DO
+        FOR j FROM i+1 TO tab.length-1 STEP step 1 DO
+            produit (tab[i], tab[j], sum)
+        END_FOR
+    END_FOR
+    IF (sum = 0) THEN
+        write ("les deux vecteurs sont ortho")
+    END_IF
+
+END.
+
+
+
+PROCEDURE produit (tab1,tab2:ARRAY_OF INTEGER , sum:INTEGER)
+VAR sum:=0;
+
+    IF ( tab1.length = tab2.length ) THEN
+
+    FOR i FROM 0 to tab1.length-1 STEP 1 DO
+        sum := sum + tab1[i]*tab2[i];
+
+    ELSE
+        WRITE ( " diffrent table length ");
+    END_IF
+
+END
+    
+FUNCTION produit (tab1,tab2:ARRAY_OF INTEGER ) sum:INTEGER
+VAR sum:=0;
+
+    IF ( tab1.length = tab2.length ) THEN
+
+    FOR i FROM 0 to tab1.length-1 STEP 1 DO
+        sum := sum + tab1[i]*tab2[i];
+
+    ELSE
+        WRITE ( " diffrent table length ");
+    END_IF
+    
+END
+
+
+
+
+
+
+
+END.

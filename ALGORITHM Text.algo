@@ -1,0 +1,32 @@
+ALGORITHM Text
+VAR
+    i: INTEGER:=0;
+    nbmot: INTEGER:=0;;
+    j: INTEGER:=0;
+    k: INTEGER:=0;
+    nbcar: INTEGER:=0;
+    text: STRING;
+BEGIN
+    DO
+    Read(text);
+    k:=text.length;
+    While (text[k]:="."); 
+
+    FOR i FROM 0 TO text.length-1 STEP step  DO
+        IF (text[i]:=" ") THEN
+            nbmot:=nbmot+1; 
+        ELSE
+            nbcar:=nbcar+1;
+        END_IF 
+
+        IF (text[i]:="a" OR text[i]:="e" OR text[i]:="i" OR text[i]:="o" OR text[i]:="u" OR text[i]:="y") THEN
+            j:=j+1;
+    END_FOR
+
+    write("nombre de caractere :");
+    write(nbcar);
+    Write("nombre mot :");
+    Write(nbmot+1);
+    Write("nombre voyelle :");
+    Write(j);
+END.
