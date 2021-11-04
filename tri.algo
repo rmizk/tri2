@@ -1,0 +1,25 @@
+ALGORITHM algorithm_name
+VAR
+    i,j:=INTEGER;
+    tab:ARRAY_OF INTEGER;
+BEGIN
+
+/*    FOR i FROM min TO max STEP step  DO
+        j = i
+        WHILE (j > 0 and tab[j-1] > tab [j]) DO
+            swap tab[j-1] and tab[j]
+            j:=j-1
+        END_WHILE
+    END_FOR */
+
+    FOR i FROM 0 TO tab.length STEP step 1  DO
+        FOR j FROM i+1 TO max STEP step  DO
+            IF (tab[i]>tab[j]) THEN
+                ech:=tab[i];
+                tab[i]:=tab[j];
+                tab[j]:=ech;
+
+            END_IF
+        END_FOR
+    END_FOR
+END
